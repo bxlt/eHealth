@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <UploaderScreen /> 1. FamilyDoctorMainScreen App Has been loaded 1`] = `ShallowWrapper {}`;
+
+exports[`Test <UploaderScreen /> 2. PageTitle App Has been loaded 1`] = `ShallowWrapper {}`;

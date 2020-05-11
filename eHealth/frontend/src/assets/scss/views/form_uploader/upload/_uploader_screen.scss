@@ -1,0 +1,38 @@
+.uploader--form-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .uploader--input-wrapper {
+    margin-top: 1rem;
+    margin-bottom: 0.7rem;
+    div[id*='-error'] {
+      color: $red;
+      margin-bottom: 1rem;
+    }
+    label {
+      display: inline-block;
+      font-weight: 500;
+      width: 100px;
+      margin-right: 2rem;
+    }
+    input {
+      height: 1.25rem;
+      width: 300px;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    &:last-child {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.dropzone {
+  border: 2px dashed $blue-dark;
+  width: 600px;
+  text-align: center;
+  padding: 5rem;
+  &:hover {
+    outline: none !important;
+  }
+}

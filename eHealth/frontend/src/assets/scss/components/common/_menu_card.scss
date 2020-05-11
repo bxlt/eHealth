@@ -1,0 +1,43 @@
+.menu-card {
+  height: 200px;
+  width: 200px;
+  padding: 1rem;
+  margin: 0 2rem 0 2rem;
+  background: $white;
+  box-shadow: $card-shadow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-card:hover {
+  cursor: pointer;
+  box-shadow: $card-shadow-hover;
+}
+
+.menu-card-header-wrapper {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: $black;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.menu-card-text{
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: $black;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 1rem;
+}
+
+.menu-card-icon {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}

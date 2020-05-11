@@ -1,0 +1,31 @@
+.question-container {
+  width: 600px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  align-self: center;
+}
+
+.question-container .hidden {
+  display: none;
+}
+
+.question-wrapper {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: 2rem;
+  align-items: left;
+  text-align: left;
+  font-size: 15px;
+}
+
+.question-wrapper > label {
+  font-weight: 400;
+}
+
+.disabled {
+  color: #cccccc;
+}
+
+label {
+  padding-right: 1em;
+}

@@ -1,0 +1,56 @@
+version: "3"
+services:
+  db:
+    image: "postgres:12.0-alpine"
+    ports:
+      - 5432
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+  redis:
+    image: redis:alpine
+    ports:
+      - 6379
+    volumes:
+      - redis:/data
+  sidekiq:
+    depends_on:
+      - 'db'
+      - 'redis'
+    links:
+      - 'redis'
+    build: ./eHealth/backend
+    command: sidekiq -C config/sidekiq.yml
+    volumes:
+      - './tmp/sidekiq:/eHealth/backend'
+    env_file:
+      - '.env'      
+  api:
+    build: ./eHealth/backend
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -b '0.0.0.0' -p 3001"
+    volumes:
+      - ./eHealth/backend:/backend
+    ports:
+      - 3001:3001
+    depends_on:
+      - db    
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      RAILS_ENV: ${RAILS_ENV}
+      SECRET_KEY_BASE: ${SECRET_KEY_BASE}
+      REDIS_URL: ${REDIS_URL}
+  web:
+    command: yarn start
+    build: ./eHealth/frontend
+    ports:
+      - 3000:3000
+    volumes:
+      - "./eHealth/frontend:/frontend"
+volumes:
+  db:
+  redis:

@@ -1,0 +1,46 @@
+.form-card {
+  padding: 2rem;
+  box-shadow: $card-shadow;
+  text-align: left !important;
+  background: $white;
+  margin-bottom: 1.25rem;
+
+  .form-card-title {
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: 1.33px;
+    margin-bottom: 1rem;
+  }
+
+  .form-card-attributes-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+  }
+
+  .form-card-attribute {
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    letter-spacing: 1.11px;
+
+    .form-attributes-title {
+      font-weight: 500;
+    }
+
+    .form-card-attributes-text {
+      color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      margin-left: 0.25rem;
+    }
+  }
+
+  .form-card-attribute:not(:first-child) {
+    margin-left: 2rem;
+  }
+}
+
+.form-card:hover {
+  cursor: pointer;
+  box-shadow: $card-shadow-hover;
+}

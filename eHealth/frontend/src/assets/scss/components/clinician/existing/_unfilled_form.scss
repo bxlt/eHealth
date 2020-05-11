@@ -1,0 +1,103 @@
+.unfilled-form-screen {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  width: 60%;
+}
+
+.uff-section-card {
+  background: white;
+  text-align: left !important;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  align-self: center;
+}
+
+
+.uff-section-card-header {
+  display: flex;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 1.33px;
+  flex-direction: row;
+  align-items: center;
+  padding:1rem;
+  justify-content: space-between;
+  transition-duration: 0.2s;
+  box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.21);
+}
+.uff-section-card-header:hover {
+  box-shadow: 0 2px 11px 3px rgba(0, 0, 0, 0.21);
+}
+.uff-section-card-header:active {
+  transform: translateY(4px);
+}
+
+.uff-sub-section-card-header{
+  display: flex;
+  flex:1;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 1.33px;
+  flex-direction: row;
+  align-items: center;
+  padding:1rem;
+  justify-content: space-between;
+  transition-duration: 0.2s;
+}
+.uff-sub-section-card-header:hover {
+  background-color: #95c6f8;
+  background-image: linear-gradient(to left, white, #95c6f8); 
+}
+.uff-sub-section-card-header:active {
+  transform: translateY(4px);
+}
+
+.uff-submitButton{
+  width:100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  align-self: center;
+  font-size: 24px;
+  font-family: Rubik;
+  font-weight: 500;
+  background: #95C6F8;
+  box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.21);
+  letter-spacing: 1.33px;
+  height: 3rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  transition-duration: 0.5s;
+
+}
+.uff-submitButton:hover{
+  background-color: $blue-dark; /* For browsers that do not support gradients */
+  color: white;
+  box-shadow: 0 0 10px 2px rgba(0,0,0,0.23);
+  
+}
+.uff-submitButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.uff-doneSectionButton{
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 12px;
+  background: #288fb4;
+  padding: 5px;
+  margin: 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+  
+}
+.uff-doneSectionButton:hover{
+  transition: all 0.4s ease 0s;
+  }

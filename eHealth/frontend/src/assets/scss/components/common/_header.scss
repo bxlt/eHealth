@@ -1,0 +1,95 @@
+.header {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #95c6f8;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-bottom: 3rem;
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-text {
+  font-family: Rubik;
+  font-weight: 500;
+  font-size: 18px;
+  color: #000000;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-left: 1rem;
+}
+
+// Sidemenu Navigation -- Credits to W3School
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: $blue-dark;
+  overflow-x: hidden;
+  padding-top: 4rem;
+  transition: 0.25s;
+}
+
+.sidenav a {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: $white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: $white-hover;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+#exit-button {
+  background-color: $blue-dark;
+  color: $white;
+  font-size: 3rem;
+  padding: 1rem;
+  border: 0;
+  display: block;
+  margin-left: auto;
+  cursor: pointer;
+  &:focus {
+    border: 0;
+    outline: none !important;
+  }
+}

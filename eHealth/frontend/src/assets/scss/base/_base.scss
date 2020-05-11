@@ -1,0 +1,52 @@
+// Colours
+$blue: rgba(116, 135, 255, 0.07);
+$blue-dark: rgb(1, 40, 83);
+$white: #fff;
+$white-hover: #c7c7c7;
+$black: #000;
+$red: red;
+
+// Shadows
+$card-shadow: 0 2px 11px 3px rgba(0, 0, 0, 0.21);
+$card-shadow-hover: 0 2px 21px 6px rgba(0, 0, 0, 0.21);
+
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $blue;
+  min-height: 100vh;
+  color: #000;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h2 {
+  margin: 1px auto 1px auto;
+}
+
+hr {
+  width: 100%;
+  border: 0.5px solid #d9d9d9;
+}
+
+.container {
+  margin: 10px;
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}

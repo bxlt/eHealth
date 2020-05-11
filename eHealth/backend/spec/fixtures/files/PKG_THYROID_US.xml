@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SDCPackage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:ihe:qrph:sdc:2016" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="urn:ihe:qrph:sdc:2016 ../Schemas/RFD+SDCRetrieveForm.xsd" packageID="PKG_ThyroidNoduleUS" lineage="PKG_ThyroidNoduleUS_1" version="2.1.2" fullURI="_baseURI=cancercare.on.ca&amp;_lineage=PKG_ThyroidNoduleUS_1;_version=2.1.1&amp;_docType=sdcPKG" baseURI="cancercare.on.ca">
+	<XMLPackage>
+		<FormDesign xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="US_Thyroid_CCO.359_2.1.2.DRAFT_sdcFDF" baseURI="cancercare.on.ca" fullURI="_baseURI=cancercare.on.ca&amp;_lineage=US_Thyroid_CCO.359&amp;_version=2.1.2.DRAFT&amp;_docType=sdcFDF" formTitle="CCO Synoptic Template for  Thyroid US" lineage="US_Thyroid_CCO.359" filename="US_Thyroid_CCO.359_2.1.2.DRAFT_sdcFDF.xml" version="2.1.2.DRAFT" xmlns="urn:ihe:qrph:sdc:2016">
+			<Property name="Copyright" type="CAPeCC_static_text" styleClass="copyright" propName="Copyright" val="(c) 2018 College of American Pathologists.  All rights reserved.  License required for use." />
+			<Property name="GenericHeaderText" type="CAPeCC_static_text" propName="GenericHeaderText" val="CCO Radiology Synoptic Template" />
+			<Property name="Category" type="CAPeCC_meta" propName="Category" val="Endocrine" />
+			<Property name="OfficialName" type="CAPeCC_meta" propName="OfficialName" val="CCO Synoptic Template for  Thyroid US" />
+			<Property name="CAP_ProtocolName" type="CAPeCC_meta" propName="CAP_ProtocolName" />
+			<Property name="CAP_ProtocolVersion" type="CAPeCC_meta" propName="CAP_ProtocolVersion" />
+			<Property name="TemplateID" type="CAPeCC_meta" propName="TemplateID" val="359.1000043" />
+			<Property name="Restrictions" type="CAPeCC_meta" propName="Restrictions" val="This template applies to Thyroid" />
+			<Property name="CAP_Required" type="CAPeCC_meta" propName="CAP_Required" val="true" />
+			<Property name="AccreditationDate" type="CAPeCC_meta dt.dateTime" propName="AccreditationDate" val="9/14/2018 12:00:00 AM" />
+			<Property name="WebPostingDate" type="CAPeCC_meta dt.dateTime" propName="WebPostingDate" val="9/14/2018 12:00:00 AM" />
+			<Property name="ShortName" type="CAPeCC_meta" propName="ShortName" val="US_Thyroid_CCO" />
+			<Property name="ApprovalStatus" type="CAPeCC_meta" propName="ReleaseStatus" val="DRAFT" />
+			<Property name="AJCC_Version" type="CAPeCC_meta" propName="AJCC_Version" val="8" />
+			<Body name="Body" ID="US_Thyroid_CCO.359_2.1.1.DRAFT_sdcFDF_Body">
+				<ChildItems name="ch_Body">
+					<Section name="S_78071" ID="78071.100004300" title="IMPRESSION">
+						<!-- Note to expert Panel: v23 of paper template has a section titles "Thyroid:", not needed? -->
+						<ChildItems name="ch_78071_1">
+							<Question name="Q_Oth_77689" ID="77689.100004300" title="A.&#x9;  Pick one of the following if no follow up required or leave blank if follow up is required:">
+								<ListField name="lf_77689_1">
+									<List name="lst_77689_2">
+										<ListItem name="LI_78072" ID="78072.100004300" title="Normal thyroid sonogram. No imaging follow up is recommended unless clinically indicated. " />
+										<ListItem name="LI_78073" ID="78073.100004300" title="Small thyroid nodules with convincingly benign features. No imaging follow up is recommended unless clinically indicated." />
+										<ListItem name="LI_78074" ID="78074.100004300" title="Consistent with Hashimoto's (lymphocytic) thyroiditis. No suspicious nodule.  No imaging follow up is recommended unless clinically indicated." />
+										<ListItem name="LI_78075" ID="78075.100004300" title="Nodules show stability over at least 5 years.  No further follow up recommended unless clinically indicated." />
+									</List>
+								</ListField>
+							</Question>
+							<Question name="Q_78076" ID="78076.100004300" title="B.   US guided FNA should be considered for nodule(s):">
+								<!--<DisplayedItem title="[Default None. If applicable, list which nodules should be considered for FNA]" ID="d_dmk1"/>-->
+								<ResponseField>
+									<Response>
+										<string val="None" />
+									</Response>
+									<TextAfterResponse val="If applicable, list which nodules should be considered for FNA" />
+								</ResponseField>
+							</Question>
+							<Question name="Q_dmk1" ID="78076.100004300" title="C.&#x9;Annual follow up US recommended until stability over 5 years has been demonstrated for the following nodule(s):">
+								<!-- <DisplayedItem title="[Default None or list nodules are recommended for follow up]" ID="d_dmk2"/> -->
+								<ResponseField>
+									<Response>
+										<string val="None" />
+									</Response>
+									<TextAfterResponse val="If applicable, list which nodules should be considered for follow up" />
+								</ResponseField>
+							</Question>
+							<Question name="Q_dmk2" ID="78076.100004300" title="D.&#x9;  Adenopathy:">
+								<ListField name="lf_dmk1">
+									<List name="lst_dmk2">
+										<ListItem name="LI_dmk1" ID="78072.100004300" title="None" />
+										<ListItem name="LI_dmk2" ID="78073.100004300" title="Yes">
+											<ChildItems name="ch_dmk2">
+												<Question name="Q_dmk10" ID="77971.100004300" title="[Enter text]">
+													<ResponseField name="rf_dmk1">
+														<Response name="rsp_dmk1">
+															<string name="str_dmk1" />
+														</Response>
+														<TextAfterResponse val="enter text if abnormal nodes are present" />
+													</ResponseField>
+												</Question>
+											</ChildItems>
+										</ListItem>
+									</List>
+								</ListField>
+							</Question>
+							<Question name="Q_dmk4" ID="78076.100004300" title="E.&#x9;  Other:">
+								<!-- <DisplayedItem title="[Default: no other abnormality demonstrated OR enter other pathology demonstrated here]" ID="d_dmk4"/> -->
+								<ResponseField>
+									<Response>
+										<string val="No other abnormality demonstrated." />
+									</Response>
+									<TextAfterResponse val="enter other pathology demonstrated here" />
+								</ResponseField>
+							</Question>
+							<DisplayedItem title="Note that nodules less than 1.5cm on the US may not be individually reported unless judged to warrant surveillance.&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Surveillance imaging is greatly facilitated by having the prior imaging file available.&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;For these recommendations, growth is defined as 50% increase in volume or 20% increase in each of two linear dimensions.&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;" ID="d_dmk3" />
+						</ChildItems>
+					</Section>
+				</ChildItems>
+			</Body>
+			<Footer name="footer" ID="Footer.US_Thyroid_CCO.359_1.0.0.DRAFT_sdcFDF">
+				<Property type="meta" styleClass="copyright" propName="CopyrightFooter" val="(c) 2018 College of American Pathologists.  All rights reserved.  License required for use." />
+			</Footer>
+		</FormDesign>
+	</XMLPackage>
+</SDCPackage>
